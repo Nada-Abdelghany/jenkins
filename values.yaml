@@ -1102,7 +1102,7 @@ agent:
 
   # Doesn't allocate pseudo TTY by default
   # -- Allocate pseudo tty to the side container
-  TTYEnabled: false
+  TTYEnabled: true
   # -- Max number of agents to launch for a whole cluster.
   containerCap: 10
   # -- Max number of agents to launch for this type of agent
