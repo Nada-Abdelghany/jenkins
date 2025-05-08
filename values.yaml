@@ -942,7 +942,7 @@ agent:
   # -- The maximum concurrent connections to Kubernetes API
   maxRequestsPerHostStr: "32"
   # -- Time in minutes after which the Kubernetes cloud plugin will clean up an idle worker that has not already terminated
-  retentionTimeout: 5
+  retentionTimeout: 15
   # -- Seconds to wait for pod to be running
   waitForPodSec: 600
   # -- Namespace in which the Kubernetes agents should be launched
