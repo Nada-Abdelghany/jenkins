@@ -1273,7 +1273,7 @@ persistence:
   #   kind: PersistentVolumeClaim
 
   # -- SubPath for jenkins-home mount
-  subPath:
+  subPath: jenkins-data
   # -- Additional volumes
   volumes: []
   #  - name: nothing
