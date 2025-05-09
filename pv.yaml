@@ -12,5 +12,5 @@ spec:
   csi:
     driver: efs.csi.aws.com
     volumeHandle: fs-0777952518931cb09
-    volumeAttributes:
-      path: /Jenkins-data # this is the path inside efs that will be mouted to the pod attached to the pvc
+ #   volumeAttributes:
+  #    path: /Jenkins-data # this is the path inside efs that will be mouted to the pod attached to the pvc
