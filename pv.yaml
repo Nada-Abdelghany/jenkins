@@ -11,6 +11,6 @@ spec:
   persistentVolumeReclaimPolicy: Retain  
   csi:
     driver: efs.csi.aws.com
-    volumeHandle: fs-0df342d78de5c7f14  
+    volumeHandle: fs-0777952518931cb09
     volumeAttributes:
       path: /Jenkins-data # this is the path inside efs that will be mouted to the pod attached to the pvc
