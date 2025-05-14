@@ -1191,7 +1191,7 @@ agent:
             args: "${computer.jnlpmac} ${computer.name}"
             ttyEnabled: false
             privileged: false
-            env:
+            envVars:
               - name: JENKINS_URL
                 value: "http://jenkins.jenkins.svc.cluster.local:8080/"
 
