@@ -992,7 +992,7 @@ agent:
 
   # You may want to change this to true while testing a new image
   # -- Always pull agent container image before build
-  alwaysPullImage: false
+  alwaysPullImage: true
   # When using Pod Security Admission in the Agents namespace with the restricted Pod Security Standard,
   # the jnlp container cannot be scheduled without overriding its container definition with a securityContext.
   # This option allows to automatically inject in the jnlp container a securityContext
@@ -1173,7 +1173,7 @@ agent:
   # Keys are only used to give the pod template a meaningful name. The only restriction is they may only contain RFC 1123 \ DNS label
   # characters: lowercase letters, numbers, and hyphens. Each pod template can contain multiple containers.
   # For this pod templates configuration to be loaded, the following values must be set:
-  # controller.JCasC.defaultConfig: true
+ controller.JCasC.defaultConfig: true
   # Best reference is https://<jenkins_url>/configuration-as-code/reference#Cloud-kubernetes. The example below creates a python pod template.
   # -- Configures extra pod templates for the default kubernetes cloud
   
@@ -1189,8 +1189,8 @@ agent:
             image: mennahaggag/jenkins-agent:v1   
             command: " "
             args: "${computer.jnlpmac} ${computer.name}"
-            ttyEnabled: false
-            privileged: false
+            ttyEnabled: true
+            privileged: true
             env:
               - name: JENKINS_URL
                 value: "http://jenkins.jenkins.svc.cluster.local:8080/"
