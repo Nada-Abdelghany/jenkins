@@ -260,7 +260,7 @@ controller:
   probes:
     startupProbe:
       # -- Set the failure threshold for the startup probe
-      failureThreshold: 12
+      failureThreshold: 40
       httpGet:
         # -- Set the Pod's HTTP path for the startup probe
         path: '{{ default "" .Values.controller.jenkinsUriPrefix }}/login'
@@ -287,7 +287,7 @@ controller:
       # If Startup Probe is not supported on your Kubernetes cluster, you might want to use "initialDelaySeconds" instead.
       # It delays the initial liveness probe while Jenkins is starting
       # -- Set the initial delay for the liveness probe in seconds
-      initialDelaySeconds:
+      initialDelaySeconds: 30
 
     readinessProbe:
       # -- Set the failure threshold for the readiness probe
