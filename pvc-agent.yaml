@@ -3,6 +3,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: agent-pvc
+  namespace: jenkins
 spec:
   accessModes:
     - ReadWriteMany
