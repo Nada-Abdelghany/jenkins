@@ -1192,7 +1192,8 @@ agent:
             ttyEnabled: true
             privileged: true
             envVars:
-              - JENKINS_URL: http://jenkins.jenkins.svc.cluster.local:8080/
+              - name: "JENKINS_URL"
+                value: "http://jenkins.jenkins.svc.cluster.local:8080/"
 
 # Inherits all values from `agent` so you only need to specify values which differ
 # -- Configure additional
