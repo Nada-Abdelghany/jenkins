@@ -222,7 +222,7 @@ controller:
   # -- k8s service clusterIP. Only used if serviceType is ClusterIP
   #clusterIp:
   # -- k8s service port
-  servicePort: 80
+  servicePort: 8080
   # -- k8s target port
   targetPort: 8080
   # -- k8s node port. Only used if serviceType is NodePort
@@ -922,7 +922,7 @@ agent:
 
   # For connecting to the Jenkins controller
   # -- Overrides the Kubernetes Jenkins URL
-  jenkinsUrl: http://jenkins.jenkins.svc.cluster.local
+  jenkinsUrl: http://jenkins.jenkins.svc.cluster.local:8080
 
   # connects to the specified host and port, instead of connecting directly to the Jenkins controller
   # -- Overrides the Kubernetes Jenkins tunnel
@@ -1076,7 +1076,7 @@ agent:
   # -- Environment variables for the agent Pod
   envVars:
   - name: JENKINS_URL
-    value: "http://jenkins.jenkins.svc.cluster.local"
+    value: "http://jenkins.jenkins.svc.cluster.local:8080"
 
   secretEnvVars: []
   # - key: PATH
