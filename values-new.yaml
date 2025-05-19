@@ -922,7 +922,7 @@ agent:
 
   # For connecting to the Jenkins controller
   # -- Overrides the Kubernetes Jenkins URL
-  jenkinsUrl: http://jenkins.jenkins.svc.cluster.local:8080
+  jenkinsUrl: http://jenkins.jenkins.svc.cluster.local
 
   # connects to the specified host and port, instead of connecting directly to the Jenkins controller
   # -- Overrides the Kubernetes Jenkins tunnel
@@ -1076,7 +1076,7 @@ agent:
   # -- Environment variables for the agent Pod
   envVars:
   - name: JENKINS_URL
-    value: "http://jenkins.jenkins.svc.cluster.local:8080/"
+    value: "http://jenkins.jenkins.svc.cluster.local"
 
   secretEnvVars: []
   # - key: PATH
