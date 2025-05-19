@@ -5,7 +5,7 @@ metadata:
   name: jenkins
 rules:
   - apiGroups: [""]
-    resources: ["pods", "services", "deployments", "replicasets", "namespaces"]
+    resources: ["pods","secrets","configmaps", "services", "deployments", "replicasets", "namespaces"]
     verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
   - apiGroups: ["apps"]
     resources: ["deployments", "replicasets"] 
@@ -20,7 +20,8 @@ kind: ServiceAccount
 metadata:
   name: jenkins
   namespace: jenkins
-
+secrets:
+  - name: jenkins-ca-secret
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
